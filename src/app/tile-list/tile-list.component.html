@@ -2,14 +2,18 @@
   <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3" *ngFor="let drink of drinks">
     <div class="card" [ngStyle]="{'background-color': drink.bg }">
       <div class="card-body py-2 lh-sm">
-        <span class="card-title fs-2 fw-bold">{{ drink.name }}: {{ drink.counter }}</span>
-        <br/>
-        <span class="card-text" style="font-size: 350%;">
+        <div class="card-text fs-3 fw-bold">{{ drink.name }}: {{ drink.counter }}</div>
+        <div class="card-text" style="font-size: 320%;">
           <a href="#" class="btn btn-light" (click)="removeFromDrink(drink)">➖</a>
           {{ drink.emoji }}
           <a href="#" class="btn btn-light" (click)="addToDrink(drink)">➕</a>
-        </span>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body py-2">
+    <div class="card-text fs-3 fw-bold">Total: {{ total }}</div>
   </div>
 </div>
