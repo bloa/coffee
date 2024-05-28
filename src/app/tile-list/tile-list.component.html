@@ -1,0 +1,15 @@
+<div class="row card-group g-0">
+  <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3" *ngFor="let drink of drinks">
+    <div class="card" [ngStyle]="{'background-color': drink.bg }">
+      <div class="card-body py-2 lh-sm">
+        <span class="card-title fs-2 fw-bold">{{ drink.name }}: {{ drink.counter }}</span>
+        <br/>
+        <span class="card-text" style="font-size: 350%;">
+          <a href="#" class="btn btn-light" (click)="removeFromDrink(drink)">➖</a>
+          {{ drink.emoji }}
+          <a href="#" class="btn btn-light" (click)="addToDrink(drink)">➕</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
